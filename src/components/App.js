@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
+import '../styles/App.scss';
+import SearchBar from './SearchBar';
+import VideoDetail from './VideoDetail';
+import VideoList from './VideoList';
+import VideoListItem from './VideoListItem';
 
 class App extends Component {
   render() {
     return (
       <div>
-      <p>another dive into react and redux</p>
+        <SearchBar />
+        <VideoListItem/>
+        <VideoList/>
+        <VideoDetail/>
       </div>
     );
   }
