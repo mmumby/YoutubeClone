@@ -9,12 +9,7 @@ class SearchBar extends Component {
     }
   }
 
-  handleKeyDown(event){
-    if (event.key === 'Enter') {
-      console.log(event.target.value);
-      event.target.value = '';
-    }
-
+  handleChange(event){
     this.setState ({
       searchValue: event.target.value
     })
@@ -23,7 +18,11 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <input onKeyDown={this.handleKeyDown.bind(this)} className="search-input" placeholder="Search for video and press Enter"/>
+        <input
+        value={this.state.searchValue}
+        onChange={this.handleChange.bind(this)}
+        className="search-input"
+        placeholder="Search for video and press Enter"/>
       </div>
     );
   }
