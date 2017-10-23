@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../styles/App.scss';
 import SearchBar from './SearchBar';
-import VideoDetail from './VideoDetail';
 import VideoList from './VideoList';
 import YTSearch from 'youtube-api-search';
+import VideoDetail from './VideoDetail';
 
 
 class App extends Component {
@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      videos: []
+      videos: [],
+      selectedVideo: null
     };
 
     YTSearch({
@@ -20,17 +21,18 @@ class App extends Component {
     },
     (videos) => {
       this.setState({
-        videos
+        videos: videos,
+        selectedVideo: videos[0]
       });
-    })
+    });
   }
 
   render() {
     return (
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.selectedVideo}/>
         <VideoList videos={this.state.videos} />
-        <VideoDetail/>
       </div>
     );
   }
