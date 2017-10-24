@@ -1,0 +1,27 @@
+/*components*/
+#youtube-icon {
+  color: #ed3833; }
+
+.navbar {
+  display: flex;
+  position: fixed; }
+
+.search-input {
+  order: 2;
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid rgba(128, 128, 128, 0.47); }
+
+.displayed-video {
+  width: 640px;
+  height: 360px; }
+
+.displayed-content {
+  margin: 100px; }
+
+.video-list {
+  list-style-type: none; }
+
+.container {
+  display: flex; }

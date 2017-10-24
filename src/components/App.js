@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/App.scss';
+import '../styles/App.css';
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import YTSearch from 'youtube-api-search';
@@ -15,9 +15,13 @@ class App extends Component {
       selectedVideo: null
     };
 
+    this.handleVideoSearch('testdata');
+  }
+
+  handleVideoSearch(searchValue) {
     YTSearch({
       key: process.env.REACT_APP_YOUTUBE_KEY,
-      searchValue: 'testdata'
+      searchValue: searchValue
     },
     (videos) => {
       this.setState({
@@ -29,8 +33,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <SearchBar />
+      <div className="container">
+        <SearchBar onVideoSearch={searchValue => this.handleVideoSearch(searchValue)}/>
         <VideoDetail
           video={this.state.selectedVideo}/>
         <VideoList

@@ -1,1 +1,13 @@
+@import "./Variables.scss";
 
+/*components*/
+@import "./Header.scss";
+@import "./SearchBar.scss";
+@import "./VideoDetail.scss";
+@import "./VideoList.scss";
+@import "./VideoListItem.scss";
+
+
+.container {
+  display: flex;
+}

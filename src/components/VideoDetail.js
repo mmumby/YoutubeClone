@@ -12,9 +12,9 @@ class VideoDetail extends Component {
     const url = `https://www.youtube.com/embed/${video}`;
 
     return (
-      <div>
+      <div className="displayed-content">
         <div>
-          <iframe src={url}></iframe>
+          <iframe className="displayed-video" src={url}></iframe>
         </div>
         <div>
           <div>{this.props.video.snippet.title}</div>
