@@ -11,7 +11,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container-one">
         <div className="header-logo">
           <i id="youtube-icon" className="fa fa-4x fa-youtube" aria-hidden="true"></i>
         </div>

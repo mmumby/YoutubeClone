@@ -33,8 +33,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="container-one">
+      <div className="app">
+        <div>
           <SearchBar onSearchTermChange={searchValue => this.videoSearch(searchValue)}/>
         </div>
         <div className="container-two">

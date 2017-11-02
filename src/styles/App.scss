@@ -7,6 +7,9 @@
 @import "./VideoList.scss";
 @import "./VideoListItem.scss";
 
+.app {
+  margin: 50px;
+}
 
 /*flexbox grid layouts */
 .container-one {
@@ -15,21 +18,22 @@
 
 /*search box & title*/
 .header-logo {
-  flex: 1;
+
 }
 
 .header-search {
-  flex: 5;
+
 }
 
 .container-two {
   display: flex;
-  justify-content: center;
+  margin-left: 80px;
+  margin-top: 20px;
 }
 
 /*currently displayed video*/
 .displayed-content {
-  flex: 2;
+  flex: 5;
 }
 
 /*list of all videos returned from search*/
