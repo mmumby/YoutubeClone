@@ -13,7 +13,7 @@ class SearchBar extends Component {
     return (
       <div className="container-one">
         <div className="header-logo">
-          <i id="youtube-icon" className="fa fa-4x fa-youtube" aria-hidden="true"></i>
+          <i id="youtube-icon" className="fa fa-3x fa-youtube" aria-hidden="true"></i>
         </div>
         <div className="header-search">
           <input

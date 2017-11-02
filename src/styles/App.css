@@ -14,11 +14,14 @@
   height: 540px; }
 
 .displayed-info {
-  width: 854px;
-  margin: 20px; }
+  border: 1px solid rgba(128, 128, 128, 0.19);
+  padding: 20px; }
 
 .displayed-title {
   font-weight: bold; }
+
+.video-list-container {
+  border: 1px solid rgba(128, 128, 128, 0.19); }
 
 .app {
   margin: 20px; }
@@ -28,7 +31,8 @@
   display: flex;
   height: 56px;
   padding: 0 16px;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.19); }
 
 /*search box & title*/
 .header-logo {
@@ -39,12 +43,13 @@
 
 .container-two {
   display: flex;
-  margin-left: 80px;
-  margin-top: 20px; }
+  align-items: center;
+  margin: 20px; }
 
 /*currently displayed video*/
 .displayed-content {
-  flex: 5; }
+  flex: 5;
+  margin-right: 20px; }
 
 /*list of all videos returned from search*/
 .video-list {
@@ -56,11 +61,9 @@
 
 /*video-list video*/
 .item-one {
-  flex: 2;
-  margin-right: 5px; }
+  flex: 2; }
 
 /*video-list information*/
 .item-two {
   flex: 1;
-  margin-top: 20px;
   font-weight: bold; }

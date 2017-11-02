@@ -6,7 +6,7 @@ import VideoListItem from './VideoListItem';
 class VideoList extends Component {
   render() {
     return (
-      <div>
+      <div className="video-list-container">
         <ul>
           {this.props.videos.map((video) =>
           <VideoListItem
