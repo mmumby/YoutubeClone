@@ -2,10 +2,6 @@
 #youtube-icon {
   color: #ed3833; }
 
-.navbar {
-  display: flex;
-  position: fixed; }
-
 .search-input {
   order: 2;
   width: 500px;
@@ -17,11 +13,25 @@
   width: 640px;
   height: 360px; }
 
-.displayed-content {
-  margin: 100px; }
-
-.video-list {
-  list-style-type: none; }
-
-.container {
+/*flexbox grid layouts */
+.container-one {
   display: flex; }
+
+/*search box & title*/
+.header-logo {
+  flex: 1; }
+
+.header-search {
+  flex: 5; }
+
+.container-two {
+  display: flex;
+  justify-content: center; }
+
+/*currently displayed video*/
+.displayed-content {
+  flex: 2; }
+
+/*list of all videos returned from search*/
+.video-list {
+  flex: 1; }

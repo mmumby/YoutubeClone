@@ -15,10 +15,10 @@ class App extends Component {
       selectedVideo: null
     };
 
-    this.handleVideoSearch('testdata');
+    this.videoSearch('testdata');
   }
 
-  handleVideoSearch(searchValue) {
+  videoSearch(searchValue) {
     YTSearch({
       key: process.env.REACT_APP_YOUTUBE_KEY,
       searchValue: searchValue
@@ -33,13 +33,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <SearchBar onVideoSearch={searchValue => this.handleVideoSearch(searchValue)}/>
-        <VideoDetail
-          video={this.state.selectedVideo}/>
-        <VideoList
-          videos={this.state.videos}
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})}/>
+      <div>
+        <div className="container-one">
+          <SearchBar onSearchTermChange={searchValue => this.videoSearch(searchValue)}/>
+        </div>
+        <div className="container-two">
+          <VideoDetail
+            video={this.state.selectedVideo}/>
+          <VideoList
+            videos={this.state.videos}
+            onVideoSelect={selectedVideo => this.setState({selectedVideo})}/>
+        </div>
       </div>
     );
   }

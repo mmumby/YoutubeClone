@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header';
-
 
 class SearchBar extends Component {
   constructor(props){
     super(props)
+
     this.state ={
       searchValue: '',
     };
@@ -12,20 +11,24 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="navbar">
-        <Header />
-        <input
-        value={this.state.searchValue}
-        onChange={event => this.handleChange(event.target.value)}
-        className="search-input"
-        placeholder="Search for video and press Enter"/>
+      <div>
+        <div className="header-logo">
+          <i id="youtube-icon" className="fa fa-4x fa-youtube" aria-hidden="true"></i>
+        </div>
+        <div className="header-search">
+          <input
+          value={this.state.searchValue}
+          onChange={event => this.onInputChange(event.target.value)}
+          className="search-input"
+          placeholder="Search for video and press Enter"/>
+        </div>
       </div>
     );
   }
 
-  handleChange(searchValue){
+  onInputChange(searchValue){
     this.setState({searchValue});
-    this.props.onVideoSearch(searchValue);
+    this.props.onSearchTermChange(searchValue);
   }
 }
 

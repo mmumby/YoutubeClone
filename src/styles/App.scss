@@ -8,6 +8,31 @@
 @import "./VideoListItem.scss";
 
 
-.container {
+/*flexbox grid layouts */
+.container-one {
   display: flex;
+}
+
+/*search box & title*/
+.header-logo {
+  flex: 1;
+}
+
+.header-search {
+  flex: 5;
+}
+
+.container-two {
+  display: flex;
+  justify-content: center;
+}
+
+/*currently displayed video*/
+.displayed-content {
+  flex: 2;
+}
+
+/*list of all videos returned from search*/
+.video-list {
+  flex: 1;
 }
