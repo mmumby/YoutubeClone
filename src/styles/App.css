@@ -10,21 +10,33 @@
   border: 2px solid rgba(128, 128, 128, 0.47); }
 
 .displayed-video {
-  width: 640px;
-  height: 360px; }
+  width: 854px;
+  height: 540px; }
 
 .displayed-info {
-  width: 640px;
+  width: 854px;
   margin: 20px; }
 
+.displayed-title {
+  font-weight: bold; }
+
 .app {
-  margin: 50px; }
+  margin: 20px; }
 
 /*flexbox grid layouts */
 .container-one {
-  display: flex; }
+  display: flex;
+  height: 56px;
+  padding: 0 16px;
+  align-items: center; }
 
 /*search box & title*/
+.header-logo {
+  flex: 1; }
+
+.header-search {
+  flex: 9; }
+
 .container-two {
   display: flex;
   margin-left: 80px;
@@ -36,4 +48,19 @@
 
 /*list of all videos returned from search*/
 .video-list {
-  flex: 1; }
+  flex: 1;
+  list-style-type: none; }
+
+.video-list-items {
+  display: flex; }
+
+/*video-list video*/
+.item-one {
+  flex: 2;
+  margin-right: 5px; }
+
+/*video-list information*/
+.item-two {
+  flex: 1;
+  margin-top: 20px;
+  font-weight: bold; }

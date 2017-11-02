@@ -17,7 +17,7 @@ class VideoDetail extends Component {
           <iframe className="displayed-video" src={url}></iframe>
         </div>
         <div className="displayed-info">
-          <div>{this.props.video.snippet.title}</div>
+          <div className="displayed-title">{this.props.video.snippet.title}</div>
           <div>{this.props.video.snippet.description}</div>
         </div>
       </div>
