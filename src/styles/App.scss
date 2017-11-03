@@ -44,19 +44,16 @@
 .video-list {
   flex: 1;
   list-style-type: none;
+  margin-bottom: 10px;
 }
 
 .video-list-items {
   display: flex;
 }
 
-/*video-list video*/
-.item-one {
-  flex: 2;
-}
-
 /*video-list information*/
 .item-two {
-  flex: 1;
+  margin-left: 20px;
   font-weight: bold;
+  width: 50%;
 }

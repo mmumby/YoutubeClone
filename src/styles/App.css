@@ -14,14 +14,17 @@
   height: 540px; }
 
 .displayed-info {
+  margin-top: 20px;
   border: 1px solid rgba(128, 128, 128, 0.19);
+  border-radius: 5px;
   padding: 20px; }
 
 .displayed-title {
   font-weight: bold; }
 
 .video-list-container {
-  border: 1px solid rgba(128, 128, 128, 0.19); }
+  border: 1px solid rgba(128, 128, 128, 0.19);
+  border-radius: 5px; }
 
 .app {
   margin: 20px; }
@@ -54,16 +57,14 @@
 /*list of all videos returned from search*/
 .video-list {
   flex: 1;
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 10px; }
 
 .video-list-items {
   display: flex; }
 
-/*video-list video*/
-.item-one {
-  flex: 2; }
-
 /*video-list information*/
 .item-two {
-  flex: 1;
-  font-weight: bold; }
+  margin-left: 20px;
+  font-weight: bold;
+  width: 50%; }
