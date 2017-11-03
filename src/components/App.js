@@ -4,6 +4,7 @@ import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import YTSearch from 'youtube-api-search';
 import VideoDetail from './VideoDetail';
+import _ from 'lodash';
 
 
 class App extends Component {
@@ -19,11 +20,8 @@ class App extends Component {
   }
 
   videoSearch(searchValue) {
-    YTSearch({
-      key: process.env.REACT_APP_YOUTUBE_KEY,
-      searchValue: searchValue
-    },
-    (videos) => {
+    console.log('video is updating...')
+    YTSearch({key: process.env.REACT_APP_YOUTUBE_KEY, searchValue: searchValue}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
@@ -32,10 +30,13 @@ class App extends Component {
   }
 
   render() {
+    const videoSearch = _.debounce((searchValue) => {this.videoSearch(searchValue) }, 300);
+
     return (
       <div className="app">
         <div>
-          <SearchBar onSearchTermChange={searchValue => this.videoSearch(searchValue)}/>
+          <SearchBar
+          onSearchValueChange={videoSearch} />
         </div>
         <div className="container-two">
           <VideoDetail
