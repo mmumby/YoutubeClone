@@ -1,23 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-class VideoListItem extends Component {
-  render() {
+const VideoListItem = (props) => {
     return (
-      <li className="video-list" onClick={() => this.props.onVideoClick(this.props.video)}>
+      <li className="video-list" onClick={() => props.onVideoClick(props.video)}>
         <div className="video-list-items">
           <div className="item-one">
-            <img src={this.props.video.snippet.thumbnails.default.url}/>
+            <img src={props.video.snippet.thumbnails.default.url}/>
           </div>
           <div>
             <div className="item-two">
-              {this.props.video.snippet.title}
+              {props.video.snippet.title}
             </div>
           </div>
         </div>
       </li>
     );
-  }
 }
 
 export default VideoListItem;
