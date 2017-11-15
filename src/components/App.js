@@ -36,7 +36,7 @@ class App extends Component {
       <div className="app">
         <div>
           <SearchBar
-          onSearchValueChange={videoSearch} />
+          onSearchValueChange={searchValue => this.videoSearch(searchValue)} />
         </div>
         <div className="container-two">
           <VideoDetail
