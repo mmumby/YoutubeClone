@@ -30,13 +30,13 @@ class App extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce((searchValue) => {this.videoSearch(searchValue) }, 300);
+    const videoSearch = _.debounce((searchValue) => { this.videoSearch(searchValue) }, 300);
 
     return (
       <div className="app">
         <div>
           <SearchBar
-          onSearchValueChange={searchValue => this.videoSearch(searchValue)} />
+          onSearchValueChange={videoSearch} />
         </div>
         <div className="container-two">
           <VideoDetail
